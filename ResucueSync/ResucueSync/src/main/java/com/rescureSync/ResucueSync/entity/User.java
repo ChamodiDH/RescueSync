@@ -26,6 +26,9 @@ public class User {
     @Column(name="PASSWORD")
     private String password;
 
+    @Column(name="ENABLE")
+    private boolean enable;
+
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles;
 
@@ -41,6 +44,11 @@ public class User {
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private GeneralUser generalUser;
+
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private VerificationToken verificationToken;
+
 
 
 }
