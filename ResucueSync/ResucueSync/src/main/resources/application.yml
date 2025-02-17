@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ResucueSync
+  profiles:
+      active: dev
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rescue_sync
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
