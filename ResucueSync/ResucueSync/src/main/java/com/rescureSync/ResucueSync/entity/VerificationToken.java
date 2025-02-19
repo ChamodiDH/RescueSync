@@ -1,12 +1,15 @@
 package com.rescureSync.ResucueSync.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class VerificationToken {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
